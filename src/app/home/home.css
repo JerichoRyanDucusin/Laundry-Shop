@@ -1,0 +1,63 @@
+/* ==========================================
+   CLEANED HOME COMPONENT CLASSES
+   ========================================== */
+   .welcome-box { 
+    max-width: 800px; 
+    margin: 5rem auto; /* Restored clean, balanced top and bottom margins */
+    text-align: center; 
+    padding: 0 1rem; 
+    box-sizing: border-box;
+  }
+  
+  .welcome-box h1 { 
+    font-size: 3rem; 
+    font-weight: 800; 
+    color: #0f172a; 
+    margin-bottom: 0.5rem; 
+  }
+  
+  .welcome-box p { 
+    font-size: 1.2rem; 
+    color: #475569; 
+    margin-bottom: 2.5rem; 
+    line-height: 1.6; 
+  }
+  
+  .feature-info-row { 
+    display: flex; 
+    gap: 1.5rem; 
+    justify-content: center; 
+    margin-bottom: 3rem; 
+  }
+  
+  .info-card { 
+    border: 1px solid #e2e8f0; 
+    padding: 1.5rem; 
+    border-radius: 12px; 
+    background: white; 
+    text-align: left; 
+    width: 45%; 
+    box-sizing: border-box;
+  }
+  
+  .info-card h3 { 
+    margin-top: 0; 
+    color: #0284c7; 
+  }
+  
+  .start-kiosk-btn { 
+    background-color: #0284c7; 
+    color: white; 
+    border: none; 
+    padding: 1rem 2.5rem; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background 0.2s; 
+  }
+  
+  .start-kiosk-btn:hover { 
+    background-color: #0369a1; 
+  }
+  

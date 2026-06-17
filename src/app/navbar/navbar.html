@@ -1,1 +1,9 @@
-<p>navbar works!</p>
+<header class="main-header">
+    <div class="logo-area">🫧 LaundroMat Hub</div>
+    <nav class="navigation-bar">
+      <a routerLink="home" routerLinkActive="active-route">Home Base</a>
+      <a routerLink="kiosk" routerLinkActive="active-route">Kiosk Ordering</a>
+    </nav>
+    <div class="cart-pill">🧺 Order Value: ₱{{ dataService.cartTotal() }}</div>
+  </header>
+  

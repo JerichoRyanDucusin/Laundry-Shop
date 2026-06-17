@@ -1,1 +1,183 @@
-/* You can add global styles to this file, and also import other style files */
+/* GLOBAL SETTINGS */
+html, body {
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #0f172a;
+  }
+  
+  /* NAVBAR DESIGN SHEET */
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0284c7;
+    padding: 1rem 2rem;
+    color: white;
+  }
+  .logo-area { font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; }
+  .navigation-bar a {
+    color: #e0f2fe;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+  .navigation-bar a:hover { color: white; }
+  .active-route { background-color: #0369a1; color: white !important; }
+  .cart-pill { background-color: #f59e0b; padding: 0.5rem 1.25rem; color: #1e293b; font-weight: bold; border-radius: 9999px; }
+  
+  /* LANDING HOME PAGE CSS */
+  .welcome-box { max-width: 800px; margin: 3rem auto; text-align: center; padding: 0 1rem; }
+  .banner-wrapper { width: 100%; max-width: 700px; margin: 0 auto 2rem auto; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+  .home-banner { width: 100%; height: auto; display: block; object-fit: cover; }
+  .welcome-box h1 { font-size: 3rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem; }
+  .welcome-box p { font-size: 1.2rem; color: #475569; margin-bottom: 2.5rem; line-height: 1.6; }
+  .feature-info-row { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 3rem; }
+  .info-card { border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 12px; background: white; text-align: left; width: 45%; }
+  .info-card h3 { margin-top: 0; color: #0284c7; }
+  .start-kiosk-btn { background-color: #0284c7; color: white; border: none; padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.2s; }
+  .start-kiosk-btn:hover { background-color: #0369a1; }
+  
+  /* REUSABLE CHILD CARD STYLES */
+  .service-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; }
+  .card-icon { font-size: 2.5rem; margin-bottom: 0.5rem; text-align: center; }
+  .service-card h3 { margin: 0 0 0.25rem 0; font-size: 1.2rem; color: #1e293b; }
+  .category-tag { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: #0284c7; background: #e0f2fe; padding: 0.25rem 0.5rem; border-radius: 4px; width: fit-content; margin: 0 0 0.75rem 0; }
+  .card-desc { font-size: 0.85rem; color: #64748b; line-height: 1.4; flex-grow: 1; margin-bottom: 1rem; }
+  .card-price { font-size: 1.25rem; font-weight: bold; color: #0f172a; margin: 0 0 1rem 0; }
+  .weight-controls { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; font-size: 0.9rem; }
+  .weight-controls input { width: 70px; padding: 0.35rem; border: 1px solid #cbd5e1; border-radius: 4px; text-align: center; font-weight: bold; }
+  .add-to-cart-btn { background: #0284c7; color: white; border: none; padding: 0.6rem; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%; transition: background 0.2s; }
+  .add-to-cart-btn:hover { background: #0369a1; }
+  
+  /* KIOSK MAIN PANEL WRAPPER AND FLEX BOX GRIDS */
+  .kiosk-container { display: flex; gap: 2rem; padding: 2rem; max-width: 1400px; margin: 0 auto; box-sizing: border-box; }
+  .kiosk-main-panel { flex: 2; min-width: 400px; }
+  .kiosk-checkout-panel { flex: 1; min-width: 320px; border: 1px solid #cbd5e1; border-radius: 12px; padding: 1.5rem; background: #f8fafc; height: fit-content; position: sticky; top: 20px; box-sizing: border-box; }
+  .logistics-box { background: #f1f5f9; border-radius: 12px; padding: 1.5rem; margin-bottom: 2.5rem; text-align: left; }
+  .logistics-group { margin-bottom: 1.5rem; }
+  .logistics-group:last-child { margin-bottom: 0; }
+  .logistics-group h3 { margin: 0 0 0.75rem 0; font-size: 1.1rem; color: #1e293b; }
+  .toggle-buttons { display: flex; gap: 1rem; }
+  .toggle-buttons button { flex: 1; padding: 0.75rem; border: 2px solid #cbd5e1; border-radius: 8px; font-weight: bold; font-size: 0.9rem; background: white; cursor: pointer; transition: all 0.2s; }
+  .toggle-buttons button.active { border-color: #0284c7; background: #e0f2fe; color: #0369a1; }
+  .notif-text { font-size: 0.85rem; color: #64748b; margin: 0.5rem 0 0 0; font-style: italic; }
+  .catalog-shelf h2 { text-align: left; font-size: 1.6rem; margin-bottom: 1.5rem; color: #0f172a; }
+  .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; }
+  
+  /* CHECKOUT BASKET ROW CONTROLS */
+  .logistics-summary-pill { display: flex; justify-content: space-between; background: #e2e8f0; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .basket-items-list { max-height: 400px; overflow-y: auto; margin-bottom: 1.5rem; }
+  .basket-item-row { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid #e2e8f0; text-align: left; }
+  .sub-math { font-size: 0.8rem; color: #64748b; margin-top: 0.25rem; }
+  .basket-action-side { display: flex; align-items: center; gap: 0.75rem; }
+  .row-subtotal { font-weight: 700; color: #0f172a; }
+  .remove-item-btn { background: none; border: none; cursor: pointer; font-size: 0.9rem; padding: 0.25rem; }
+  .empty-basket-text { color: #64748b; padding: 2rem 0; text-align: center; font-style: italic; }
+  .checkout-footer { border-top: 2px solid #cbd5e1; padding-top: 1rem; }
+  .fee-breakdown p { display: flex; justify-content: space-between; font-size: 0.9rem; color: #475569; margin: 0.35rem 0; }
+  .grand-total-display h3 { display: flex; justify-content: space-between; font-size: 1.3rem; margin: 1rem 0; color: #0f172a; }
+  .grand-total-display h3 span { color: #16a34a; font-weight: 800; }
+  .place-order-btn { background: #16a34a; color: white; width: 100%; border: none; padding: 1rem; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.2s; }
+  .place-order-btn:hover:not(:disabled) { background: #15803d; }
+  .place-order-btn:disabled { background: #cbd5e1; cursor: not-allowed; color: #94a3b8; }
+  
+  /* ==========================================
+   HOME FULL-SCREEN BACKGROUND STYLES
+   ========================================== */
+/* ==========================================================================
+   THEMATIC BUBBLE BACKDROP SYSTEM FOR LAUNDROMAT HUB
+   ========================================================================== */
+
+/* 1. Force the home view container to establish a layered backdrop frame canvas */
+.welcome-box { 
+    max-width: 850px; 
+    margin: 4rem auto; 
+    text-align: center; 
+    padding: 3.5rem 2.5rem; 
+    border-radius: 20px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Glues the bubbles inside the layout window boundary box */
+  
+    /* FIXED: Binds an abstract seamless soap bubble texture graphic layer */
+    background: radial-gradient(circle at 20% 30%, rgba(224, 242, 254, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(186, 230, 253, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%);
+    box-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  }
+  
+  /* 2. Procedural CSS Pseudo-elements to create real floating soap bubbles */
+  .welcome-box::before,
+  .welcome-box::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, rgba(14, 165, 233, 0.1) 60%, rgba(244, 63, 94, 0.1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.6), 0 4px 12px rgba(2, 132, 199, 0.1);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Bubble No. 1 - Floating Bottom Left */
+  .welcome-box::before {
+    width: 90px;
+    height: 90px;
+    bottom: -20px;
+    left: 5%;
+    animation: floatBubbleOne 8s ease-in-out infinite;
+  }
+  
+  /* Bubble No. 2 - Floating Top Right */
+  .welcome-box::after {
+    width: 140px;
+    height: 140px;
+    top: -40px;
+    right: 8%;
+    animation: floatBubbleTwo 12s ease-in-out infinite;
+  }
+  
+  /* 3. Typography refinements over the bubble backdrop layout */
+  .welcome-box h1 { 
+    font-size: 3.25rem; 
+    font-weight: 800; 
+    color: #0369a1; /* Deep aquatic blue */
+    margin-bottom: 0.75rem; 
+    position: relative;
+    z-index: 2; /* Lifts layout text layer cleanly above bubbles background graphic */
+  }
+  
+  .welcome-box p { 
+    font-size: 1.2rem;
+    color: #334155; 
+    margin-bottom: 2.5rem; 
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .feature-info-row,
+  .start-kiosk-btn {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* ==========================================================================
+     DYNAMIC MOTION TIMELINES FOR SOAP BUBBLES
+     ========================================================================== */
+  @keyframes floatBubbleOne {
+    0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+    50% { transform: translateY(-25px) scale(1.05) rotate(45deg); }
+  }
+  
+  @keyframes floatBubbleTwo {
+    0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+    50% { transform: translateY(35px) scale(0.95) rotate(-30deg); }
+  }
+  

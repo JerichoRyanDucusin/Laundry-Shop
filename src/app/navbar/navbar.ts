@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { LaundryDataService } from '../laundry-data/laundry-data';
+
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
-  templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
+  standalone: true,
+  imports: [RouterLink, RouterLinkActive],
+  templateUrl: './navbar.html'
 })
-export class Navbar {}
+export class NavbarComponent {
+  public dataService = inject(LaundryDataService);
+}
